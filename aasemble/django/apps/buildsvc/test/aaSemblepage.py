@@ -56,7 +56,7 @@ class BasePage(object):
 
 
 class SourcePage(BasePage):
-    '''This class is to perform all operations on sourcePackage
+    '''This class  performs all operations on sourcePackage
     view of site'''
 
     def create_new_package_source(self, git_url, branch, series):
