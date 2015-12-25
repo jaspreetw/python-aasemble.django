@@ -44,7 +44,7 @@ class RepositoryFunctionalTests(WebObject):
         self.assertNotEqual(text_found, None)
 
     def test_source_package(self):
-        '''This test performs a basic package addition and deletion.
+        '''This testperforms a basic package addition and deletion.
            This test consists of following steps:
            1. Create a session cookie for given user. We are using a existing
                user 'Dennis' which is already added as fixture.
