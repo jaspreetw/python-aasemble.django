@@ -17,7 +17,7 @@ from aasemble.django.tests import create_session_cookie
         'Skipping Selenium based test, because SKIP_SELENIUM_TESTS=1')
 class RepositoryFunctionalTests(WebObject):
     fixtures = ['complete.json']
-   
+
     def test_user_signs_up_for_signup(self):
         self.driver.get('%s%s' % (self.live_server_url, '/accounts/signup/'))
         username_input = self.driver.find_element_by_id('id_email')
