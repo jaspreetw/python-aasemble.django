@@ -38,7 +38,7 @@ class BasePage(object):
 
     def _is_value_displayed(self, locator, value):
         webelement = self.driver.find_element(*locator)
-        print("Element located")
+        print("Element is located")
         element_attribute_value = webelement.get_attribute('value')
         return element_attribute_value == value
 
