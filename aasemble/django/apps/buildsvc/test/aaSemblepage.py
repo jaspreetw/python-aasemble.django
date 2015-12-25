@@ -94,7 +94,7 @@ class SourcePage(BasePage):
             return True
 
     def delete_package_source(self):
-        '''This is the helper method to delete a package.
+        '''This method  deletes a package.
         This consists of followwinng steps:
         1. Click on source button.
         2. Click on edit button for package.
