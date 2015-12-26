@@ -1,4 +1,5 @@
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+
 import subprocess
 
 from selenium.webdriver.firefox.webdriver import WebDriver
@@ -14,7 +15,7 @@ class WebObject(StaticLiveServerTestCase):
         super(WebObject, self).setUpClass()
         self.driver = WebDriver()
         output = subprocess.check_output(['firefox', '--version'])
-        print("firefox version is %s",output)
+        print("firefox version is******************************************************** %s", output)
         self.driver.set_window_size(1024, 768)
         self.driver.maximize_window()
         self.driver.implicitly_wait(15)
