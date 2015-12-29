@@ -82,7 +82,6 @@ class RepositoryFunctionalTests(WebObject):
     def test_create_delete_mirror(self):
         ''' This tests validates if non public mirror is created'''
         url = self.live_server_url + '/apt/brandon/brandon'
-        time.sleep(5)
         self.create_login_session('brandon')
         mirrorsPage = MirrorsPage(self.driver)
         mirrorsPage.driver.get(self.live_server_url)
@@ -95,9 +94,11 @@ class RepositoryFunctionalTests(WebObject):
         self.assertTrue(mirrorsPage.verify_mirror_visible_by_url(url))
         self.assertTrue(mirrorsPage.verify_mirror_private())
         mirrorsPage.click_on_mirror_uuid(url)
+        time.sleep(5)
         # Verfies if URL value  is visible after clicking on uuid
         self.assertTrue(mirrorsPage.verify_mirror_value_visible(url))
         mirrorsPage.delete_button.click()
+        time.sleep(5)
         self.assertFalse(mirrorsPage.verify_mirror_visible_by_url(url))
 
     @override_settings(CELERY_ALWAYS_EAGER=True)
