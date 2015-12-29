@@ -95,7 +95,7 @@ class RepositoryFunctionalTests(WebObject):
         self.assertTrue(mirrorsPage.verify_mirror_private())
         mirrorsPage.click_on_mirror_uuid(url)
         time.sleep(5)
-        # Verfies if URL value  is visible after clicking on uuid
+        # Verfies if URL value  is visibles after clicking on uuid
         self.assertTrue(mirrorsPage.verify_mirror_value_visible(url))
         mirrorsPage.delete_button.click()
         time.sleep(5)
