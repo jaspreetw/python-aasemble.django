@@ -1,5 +1,6 @@
 import os
 import re
+import time
 
 from django.test.utils import override_settings, skipIf
 
@@ -81,7 +82,7 @@ class RepositoryFunctionalTests(WebObject):
     def test_create_delete_mirror(self):
         ''' This tests validates if non public mirror is created'''
         url = self.live_server_url + '/apt/brandon/brandon'
-        self.driver.implicitly_wait(15)
+        time.sleep(5)
         self.create_login_session('brandon')
         mirrorsPage = MirrorsPage(self.driver)
         mirrorsPage.driver.get(self.live_server_url)
