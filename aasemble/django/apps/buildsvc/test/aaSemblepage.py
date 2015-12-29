@@ -20,7 +20,7 @@ class BasePage(object):
 
     @property
     def new_submit_button(self):
-        '''Finds NEW and Submit button. Both buttons have same class name
+        '''Find NEW and Submit button. Both buttons have same class name
         and live in diffrent views thus giving us opportunity of code reuse'''
         return self.driver.find_element(by.By.CSS_SELECTOR, '.btn.btn-primary')
 
