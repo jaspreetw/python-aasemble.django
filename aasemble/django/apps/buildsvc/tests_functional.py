@@ -79,7 +79,7 @@ class RepositoryFunctionalTests(WebObject):
         self.assertEqual(profilePage.verify_profile_page('brandon'), True, "Profile Name not verified")
 
     def test_create_delete_mirror(self):
-        ''' This test validates if non public mirror is created'''
+        ''' This tests validates if non public mirror is created'''
         url = self.live_server_url + '/apt/brandon/brandon'
         self.driver.implicitly_wait(15)
         self.create_login_session('brandon')
