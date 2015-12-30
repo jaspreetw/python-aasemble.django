@@ -46,7 +46,7 @@ class RepositoryFunctionalTests(WebObject):
 
     @mock.patch('aasemble.django.apps.buildsvc.models.PackageSource.register_webhook')
     def test_source_package(self, register_webhook):
-        '''This test performs a basic package addition and deletion.
+        '''This tests performs a basic package addition and deletion.
            This test consists of following steps:
            1. Create a session cookie for given user. We are using a existing
                user 'Dennis' which is already added as fixture.
